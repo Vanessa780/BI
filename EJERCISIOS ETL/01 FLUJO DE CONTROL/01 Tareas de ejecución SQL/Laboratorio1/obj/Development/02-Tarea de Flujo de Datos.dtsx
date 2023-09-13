@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2023 4:46:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UDLVAH8"
+  DTS:CreatorName="DESKTOP-UDLVAH8\vanessa"
+  DTS:DTSID="{71DA12F7-4217-4B2B-9A1E-A50F6B04B253}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5228.0"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="02-Tarea de Flujo de Datos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{BBF9ABCE-4402-495B-8AD8-EA3A04EA95CE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7573D7BF-FA00-4108-8581-DAFD85BC0DD9}"
+      DTS:ObjectName="LocalHost.NORTHWND">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-02-Tarea de Flujo de Datos-{7573D7BF-FA00-4108-8581-DAFD85BC0DD9}LocalHost.NORTHWND;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Reporte de Clientes]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Este es el reporte mensual de clientes"
+      DTS:DTSID="{834CE7FC-2727-46CA-914F-CAEB510465C2}"
+      DTS:ObjectName="Reporte de Clientes">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\BI\EJERCISIOS ETL\02 - TAREA DE FLUJO DE DATOS\REPORTES\Reporte de Clientes Mensual.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{3123D887-A698-40C9-BDB8-80A92A221CB3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CompanyName"
+              DTS:DTSID="{B0D684D1-29A4-481D-97D7-F97A58C01D3D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContactName"
+              DTS:DTSID="{3EB4E5DC-D113-40AD-88C4-808D4C294072}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContactTitle"
+              DTS:DTSID="{44976B86-7B22-4362-B1FC-778C66948331}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{FB2FCBEA-B299-454A-A3CD-812214725DD2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{B18CBBBE-7A8E-4F7B-AD8F-575926410008}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{45734575-C608-4339-ADE3-D4503E044F37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostalCode"
+              DTS:DTSID="{5D862861-709F-4653-A6F4-348F6959E8FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{3E448850-DDCE-4549-89F3-037BC2308ABA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Phone"
+              DTS:DTSID="{425EB8FC-4D7A-4414-80C5-2E4218701C88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fax"
+              DTS:DTSID="{2C377004-7291-441C-B83D-23027A82128B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{225DF841-FA0B-4B62-8777-C99B4E228153}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2058"
+              name="REPORTE DE CLIENTES"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Reporte de Clientes]"
+                  connectionManagerRefId="Package.ConnectionManagers[Reporte de Clientes]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[CustomerID]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="CompanyName"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[ContactName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[ContactName]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[ContactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactTitle"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[ContactTitle]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="TABLA CUSTOMER"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      length="5"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      length="30"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      name="ContactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      length="30"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      name="ContactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      length="60"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      length="24"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      length="24"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      name="CompanyName" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      name="ContactName" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      name="ContactTitle" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      name="Address" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO.Paths[OLE DB Source Output]"
+              endId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="335.2,41.6"
+          Id="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO"
+          TopLeft="234.999987160167,77.9999994575978" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER"
+          TopLeft="279.999984701475,58.0666662628783" />
+        <NodeLayout
+          Size="199.2,41.6"
+          Id="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\REPORTE DE CLIENTES"
+          TopLeft="279.166651413673,188.933332019515" />
+        <EdgeLayout
+          Id="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO.Paths[OLE DB Source Output]"
+          TopLeft="366.799984701475,99.6666662628783">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.9666667121979,89.2666657566363"
+              Start="0,0"
+              End="11.9666667121979,81.7666657566363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.6333328783181" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.6333328783181"
+                    Point2="0,44.6333328783181"
+                    Point3="4,44.6333328783181" />
+                  <mssgle:LineSegment
+                    End="7.96666671219793,44.6333328783181" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.96666671219793,44.6333328783181"
+                    Point2="11.9666667121979,44.6333328783181"
+                    Point3="11.9666667121979,48.6333328783181" />
+                  <mssgle:LineSegment
+                    End="11.9666667121979,81.7666657566363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CARGAR TABLA COSTUMER A ARCHIVO DE TEXTO\TABLA CUSTOMER">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
