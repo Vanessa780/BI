@@ -1,0 +1,692 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2023 11:26:40 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-UDLVAH8"
+  DTS:CreatorName="DESKTOP-UDLVAH8\vanessa"
+  DTS:DTSID="{16FDC0F7-4BC9-49CF-9C7B-6E2999E637FA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5228.0"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{93B3CF52-8420-46BA-9ED4-B035D8C847F5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{6AC6082E-5A2F-470A-AE74-91760D5721F2}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\vanessa\Desktop\WorldCups.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F2B8C5EC-4B66-4D30-B20E-D783819C5CA9}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\vanessa\Desktop\WorldCups.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{0FFBE45A-5B8B-44C1-A6DF-26890780E02F}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\vanessa\Desktop\WorldCups.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{AAE1470F-815D-4ED0-B6E3-7B065386495A}"
+      DTS:ObjectName="Administrador de conexiones con Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\vanessa\Desktop\worlscup.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B1DAB3FF-F436-4CB9-8A3E-E6826D6F4EB8}"
+      DTS:ObjectName="Administrador de conexiones con Excel 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\vanessa\Desktop\worlscup.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-UDLVAH8.FIFA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3DDD44D7-088F-4D36-9885-6E854F33DE43}"
+      DTS:ObjectName="DESKTOP-UDLVAH8.FIFA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-UDLVAH8;Initial Catalog=FIFA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{3DDD44D7-088F-4D36-9885-6E854F33DE43}DESKTOP-UDLVAH8.FIFA;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\RECARGAR TABLA"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{53802E46-8607-4338-8EEF-5CA70B675969}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="RECARGAR TABLA"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\RECARGAR TABLA\IMPORTAR TABLA"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="IMPORTAR TABLA"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">WorldCups$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Year]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Country]"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Winner]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Winner]"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Winner]"
+                      name="Winner"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[RunnersUp]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[RunnersUp]"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[RunnersUp]"
+                      name="RunnersUp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Third]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Third]"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Third]"
+                      name="Third"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Fourth]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Fourth]"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Fourth]"
+                      name="Fourth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[GoalsScored]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[GoalsScored]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[GoalsScored]"
+                      name="GoalsScored"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[QualifiedTeams]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[QualifiedTeams]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[QualifiedTeams]"
+                      name="QualifiedTeams"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[MatchesPlayed]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[MatchesPlayed]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[MatchesPlayed]"
+                      name="MatchesPlayed"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Attendance]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Attendance]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Attendance]"
+                      name="Attendance"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Year]"
+                      dataType="r8"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="255"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Winner]"
+                      dataType="wstr"
+                      length="255"
+                      name="Winner" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[RunnersUp]"
+                      dataType="wstr"
+                      length="255"
+                      name="RunnersUp" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Third]"
+                      dataType="wstr"
+                      length="255"
+                      name="Third" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Fourth]"
+                      dataType="wstr"
+                      length="255"
+                      name="Fourth" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[GoalsScored]"
+                      dataType="r8"
+                      name="GoalsScored" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[QualifiedTeams]"
+                      dataType="r8"
+                      name="QualifiedTeams" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[MatchesPlayed]"
+                      dataType="r8"
+                      name="MatchesPlayed" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].ExternalColumns[Attendance]"
+                      dataType="r8"
+                      name="Attendance" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Year]"
+                      dataType="r8"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Year]"
+                      name="Year" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Winner]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Winner]"
+                      name="Winner" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[RunnersUp]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[RunnersUp]"
+                      name="RunnersUp" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Third]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Third]"
+                      name="Third" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Fourth]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Fourth]"
+                      name="Fourth" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[GoalsScored]"
+                      dataType="r8"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[GoalsScored]"
+                      name="GoalsScored" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[QualifiedTeams]"
+                      dataType="r8"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[QualifiedTeams]"
+                      name="QualifiedTeams" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[MatchesPlayed]"
+                      dataType="r8"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[MatchesPlayed]"
+                      name="MatchesPlayed" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Attendance]"
+                      dataType="r8"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[Attendance]"
+                      name="Attendance" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="INSERTAR EN TABLA SQL"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[worlscup]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-UDLVAH8.FIFA]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-UDLVAH8.FIFA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="r8"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Winner]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Winner"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Winner]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Winner]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[RunnersUp]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RunnersUp"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[RunnersUp]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[RunnersUp]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Third]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Third"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Third]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Third]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Fourth]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Fourth"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Fourth]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Fourth]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[GoalsScored]"
+                      cachedDataType="r8"
+                      cachedName="GoalsScored"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[GoalsScored]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[GoalsScored]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[QualifiedTeams]"
+                      cachedDataType="r8"
+                      cachedName="QualifiedTeams"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[QualifiedTeams]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[QualifiedTeams]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[MatchesPlayed]"
+                      cachedDataType="r8"
+                      cachedName="MatchesPlayed"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[MatchesPlayed]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[MatchesPlayed]" />
+                    <inputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].Columns[Attendance]"
+                      cachedDataType="r8"
+                      cachedName="Attendance"
+                      externalMetadataColumnId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      lineageId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output].Columns[Attendance]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="25"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Winner]"
+                      dataType="wstr"
+                      length="25"
+                      name="Winner" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[RunnersUp]"
+                      dataType="wstr"
+                      length="25"
+                      name="RunnersUp" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Third]"
+                      dataType="wstr"
+                      length="25"
+                      name="Third" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Fourth]"
+                      dataType="wstr"
+                      length="25"
+                      name="Fourth" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[GoalsScored]"
+                      dataType="i4"
+                      name="GoalsScored" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[QualifiedTeams]"
+                      dataType="i4"
+                      name="QualifiedTeams" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[MatchesPlayed]"
+                      dataType="i4"
+                      name="MatchesPlayed" />
+                    <externalMetadataColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input].ExternalColumns[Attendance]"
+                      dataType="r8"
+                      name="Attendance" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\RECARGAR TABLA.Paths[Excel Source Output]"
+              endId="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\RECARGAR TABLA\IMPORTAR TABLA.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\RECARGAR TABLA"
+          TopLeft="292.499984018505,85.7999994033575" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\RECARGAR TABLA">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\RECARGAR TABLA\IMPORTAR TABLA"
+          TopLeft="370.833313071894,124.799999132156" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL"
+          TopLeft="353.333314028052,227.066665087673" />
+        <EdgeLayout
+          Id="Package\RECARGAR TABLA.Paths[Excel Source Output]"
+          TopLeft="456.083313549973,166.399999132156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.6666659555174"
+              Start="0,0"
+              End="0,53.1666659555174">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.1666659555174" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\RECARGAR TABLA\IMPORTAR TABLA">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\RECARGAR TABLA\INSERTAR EN TABLA SQL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

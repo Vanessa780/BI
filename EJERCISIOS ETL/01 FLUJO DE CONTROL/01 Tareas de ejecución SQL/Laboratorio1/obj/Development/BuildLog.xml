@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>Laboratorio1</Name>
-    <LastWriteTime>2023-09-13T23:09:22.5197932Z</LastWriteTime>
+    <LastWriteTime>2023-09-20T01:30:23.4002936Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -12,13 +12,18 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>ejercicio_tarea_ejecucion.dtsx</Name>
-      <LastWriteTime>2023-09-13T01:36:31.115053Z</LastWriteTime>
+      <Name>02-Tarea de Flujo de Datos.dtsx</Name>
+      <LastWriteTime>2023-09-13T23:09:22.4619489Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>02-Tarea de Flujo de Datos.dtsx</Name>
-      <LastWriteTime>2023-09-13T23:09:22.4619489Z</LastWriteTime>
+      <Name>03-Flujo-datos.dtsx</Name>
+      <LastWriteTime>2023-09-14T13:07:14.3633904Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>03-Tarea de Expresión.dtsx</Name>
+      <LastWriteTime>2023-09-20T01:30:23.3796227Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
